@@ -1,36 +1,25 @@
-import {
-  SiCypress,
-  SiDocker,
-  SiExpress,
-  SiGit,
-  SiJavascript,
-  SiJest,
-  SiMongodb,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiPostgresql,
-  SiPostman,
-  SiPython,
-  SiReact,
-  SiTailwindcss,
-  SiTypescript,
-} from 'react-icons/si';
+import { IconKey } from '@/lib/icons';
 
-export const SKILLS = [
-  { icon: SiTypescript, name: 'TypeScript' },
-  { icon: SiJavascript, name: 'JavaScript' },
-  { icon: SiReact, name: 'React' },
-  { icon: SiNextdotjs, name: 'Next.js' },
-  { icon: SiReact, name: 'React Native' },
-  { icon: SiTailwindcss, name: 'Tailwind CSS' },
-  { icon: SiNodedotjs, name: 'Node.js' },
-  { icon: SiExpress, name: 'Express.js' },
-  { icon: SiPython, name: 'Python' },
-  { icon: SiMongodb, name: 'MongoDB' },
-  { icon: SiPostgresql, name: 'PostgreSQL' },
-  { icon: SiGit, name: 'Git' },
-  { icon: SiJest, name: 'Jest' },
-  { icon: SiCypress, name: 'Cypress' },
-  { icon: SiPostman, name: 'Postman' },
-  { icon: SiDocker, name: 'Docker' },
+export interface Skill {
+  name: string;
+  icon: IconKey;
+}
+
+export const SKILLS: Skill[] = [
+  { icon: 'typescript', name: 'TypeScript' },
+  { icon: 'javascript', name: 'JavaScript' },
+  { icon: 'react', name: 'React' },
+  { icon: 'nextjs', name: 'Next.js' },
+  { icon: 'react', name: 'React Native' },
+  { icon: 'tailwind', name: 'Tailwind CSS' },
+  { icon: 'nodejs', name: 'Node.js' },
+  { icon: 'express', name: 'Express.js' },
+  { icon: 'python', name: 'Python' },
+  { icon: 'mongodb', name: 'MongoDB' },
+  { icon: 'postgresql', name: 'PostgreSQL' },
+  { icon: 'git', name: 'Git' },
+  { icon: 'jest', name: 'Jest' },
+  { icon: 'cypress', name: 'Cypress' },
+  { icon: 'postman', name: 'Postman' },
+  { icon: 'docker', name: 'Docker' },
 ];

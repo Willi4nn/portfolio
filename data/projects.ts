@@ -1,21 +1,21 @@
-import {
-  SiAxios,
-  SiExpo,
-  SiExpress,
-  SiFirebase,
-  SiGoogle,
-  SiJest,
-  SiMongodb,
-  SiNodedotjs,
-  SiReact,
-  SiStripe,
-  SiTailwindcss,
-  SiTypescript,
-  SiVite,
-  SiZod,
-} from 'react-icons/si';
+import { IconKey } from '@/lib/icons';
 
-export const PROJECTS = [
+interface ProjectSkill {
+  icon: IconKey;
+  name: string;
+}
+
+interface Project {
+  image: string;
+  title: string;
+  year: number;
+  description: string;
+  skills: ProjectSkill[];
+  projectUrl?: string;
+  githubUrl?: string;
+}
+
+export const PROJECTS: Project[] = [
   {
     image: '/images/cafe-street.png',
     title: 'Cafe Street',
@@ -23,12 +23,11 @@ export const PROJECTS = [
     description:
       'E-commerce de cafés que desenvolvi com React e Stripe Checkout. Esse projeto foi feito para eu me desenvolver com contextos globais usando Context API, onde implementei adição e remoção de produtos no carrinho, formulário de endereço, busca de CEP e integração com Stripe.',
     skills: [
-      { icon: SiReact, name: 'React' },
-      { icon: SiTypescript, name: 'TypeScript' },
-      { icon: SiTailwindcss, name: 'Tailwind' },
-      { icon: SiVite, name: 'Vite' },
-      { icon: SiStripe, name: 'Stripe API' },
-      { icon: SiExpress, name: 'Express' },
+      { icon: 'react', name: 'React' },
+      { icon: 'typescript', name: 'TypeScript' },
+      { icon: 'tailwind', name: 'Tailwind' },
+      { icon: 'stripe', name: 'Stripe API' },
+      { icon: 'express', name: 'Express' },
     ],
     projectUrl: 'https://cafe-street-zeta.vercel.app/',
     githubUrl: 'https://github.com/Willi4nn/cafe-street',
@@ -40,10 +39,10 @@ export const PROJECTS = [
     description:
       'Aplicativo de previsão do tempo que criei com React e OpenWeatherMap API. Implementei busca por cidade, exibição de temperatura, umidade, vento e ícones dinâmicos. Nesse projeto aprendi integração com API, uso do Axios, pesquisa de cidades e CSS responsivo no mobile.',
     skills: [
-      { icon: SiReact, name: 'React' },
-      { icon: SiTypescript, name: 'TypeScript' },
-      { icon: SiAxios, name: 'Axios' },
-      { icon: SiExpo, name: 'Expo' },
+      { icon: 'react', name: 'React' },
+      { icon: 'typescript', name: 'TypeScript' },
+      { icon: 'axios', name: 'Axios' },
+      { icon: 'expo', name: 'Expo' },
     ],
     projectUrl: 'https://weather-wise--a2j0aj6d03.expo.app/',
     githubUrl: 'https://github.com/Willi4nn/weather-wise',
@@ -55,12 +54,11 @@ export const PROJECTS = [
     description:
       'Chat em tempo real que desenvolvi com React e Firebase. Implementei autenticação com Email e Google, Firestore, Realtime Database, e deixei totalmente responsivo. Nesse projeto experienciei a integração do Firebase para salvar usuários e conversas, autenticação e Google Auth.',
     skills: [
-      { icon: SiReact, name: 'React' },
-      { icon: SiVite, name: 'Vite' },
-      { icon: SiFirebase, name: 'Firebase' },
-      { icon: SiGoogle, name: 'Google Auth' },
-      { icon: SiTailwindcss, name: 'Tailwind' },
-      { icon: SiTypescript, name: 'TypeScript' },
+      { icon: 'react', name: 'React' },
+      { icon: 'firebase', name: 'Firebase' },
+      { icon: 'google', name: 'Google Auth' },
+      { icon: 'tailwind', name: 'Tailwind' },
+      { icon: 'typescript', name: 'TypeScript' },
     ],
     githubUrl: 'https://github.com/Willi4nn/realtime-chat',
   },
@@ -71,16 +69,16 @@ export const PROJECTS = [
     description:
       'Sistema de autenticação completa que construí com MERN + TypeScript. Implementei login social, JWT, validação com Zod, rotas protegidas e envio de email. Aprendi sobre cadastro, login normal e com Google, salvar senha criptografada, testes gerais com Jest, JWT, middleware, rotas protegidas, MongoDB e Tailwind.',
     skills: [
-      { icon: SiReact, name: 'React' },
-      { icon: SiTypescript, name: 'TypeScript' },
-      { icon: SiJest, name: 'Jest' },
-      { icon: SiZod, name: 'Zod' },
-      { icon: SiAxios, name: 'Axios' },
-      { icon: SiTailwindcss, name: 'Tailwind' },
-      { icon: SiNodedotjs, name: 'Node.js' },
-      { icon: SiExpress, name: 'Express' },
-      { icon: SiMongodb, name: 'MongoDB' },
-      { icon: SiGoogle, name: 'Google OAuth' },
+      { icon: 'react', name: 'React' },
+      { icon: 'typescript', name: 'TypeScript' },
+      { icon: 'jest', name: 'Jest' },
+      { icon: 'zod', name: 'Zod' },
+      { icon: 'axios', name: 'Axios' },
+      { icon: 'tailwind', name: 'Tailwind' },
+      { icon: 'nodejs', name: 'Node.js' },
+      { icon: 'express', name: 'Express' },
+      { icon: 'mongodb', name: 'MongoDB' },
+      { icon: 'google', name: 'Google OAuth' },
     ],
     projectUrl: 'https://mern-auth-ruby.vercel.app/',
     githubUrl: 'https://github.com/Willi4nn/mern-auth',

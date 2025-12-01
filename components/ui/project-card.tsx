@@ -1,4 +1,4 @@
-import { Skill } from '@/types/skill';
+import { IconKey } from '@/lib/icons';
 import Image from 'next/image';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { Button } from './button';
@@ -10,7 +10,10 @@ interface ProjectCardProps {
   title: string;
   year: number;
   description: string;
-  skills: Skill[];
+  skills: {
+    icon: IconKey;
+    name: string;
+  }[];
   projectUrl?: string;
   githubUrl?: string;
 }

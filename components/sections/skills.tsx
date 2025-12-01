@@ -65,7 +65,6 @@ export default function Skills() {
           onMouseLeave={onEnd}
           onTouchStart={(e) => onStart(e.touches[0].pageX)}
           onTouchMove={(e) => onMove(e.touches[0].pageX)}
-          onTouchEnd={onEnd}
         >
           <div className={`flex gap-3 ${!isDragging ? 'animate-marquee' : ''}`}>
             {infiniteSkills.map((skill, i) => (

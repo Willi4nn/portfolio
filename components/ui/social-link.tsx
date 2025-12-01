@@ -1,8 +1,8 @@
-import { IconType } from 'react-icons';
+import { IconKey, iconMap } from '@/lib/icons';
 
 interface SocialLinkProps {
   href: string;
-  icon: IconType;
+  icon: IconKey;
   borderColor?: 'white' | 'blue-500' | 'red-500' | 'green-500';
   label: string;
 }
@@ -16,12 +16,16 @@ const borderHoverMap = {
 
 export default function SocialLink({
   href,
-  icon: Icon,
+  icon,
   borderColor = 'white',
   label,
 }: SocialLinkProps) {
   const isExternal = href.startsWith('http');
   const hoverClass = borderHoverMap[borderColor];
+
+  const IconComponent = iconMap[icon];
+
+  if (!IconComponent) return null;
 
   return (
     <a
@@ -31,7 +35,7 @@ export default function SocialLink({
       rel={isExternal ? 'noopener noreferrer' : undefined}
       aria-label={label}
     >
-      <Icon
+      <IconComponent
         className="h-6 w-6 transition-transform group-hover:scale-110"
         aria-hidden="true"
       />

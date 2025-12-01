@@ -1,4 +1,3 @@
-import { SiGithub, SiGmail, SiLinkedin, SiWhatsapp } from 'react-icons/si';
 import SocialLink from '../ui/social-link';
 
 export default function Contact() {
@@ -14,25 +13,25 @@ export default function Contact() {
         <div className="flex items-center gap-5">
           <SocialLink
             href="https://github.com/Willi4nn"
-            icon={SiGithub}
+            icon="github"
             borderColor="white"
             label="GitHub"
           />
           <SocialLink
             href="https://www.linkedin.com/in/willian-psilva"
-            icon={SiLinkedin}
+            icon="linkedin"
             borderColor="blue-500"
             label="LinkedIn"
           />
           <SocialLink
             href="mailto:willianpereirasilva69@gmail.com"
-            icon={SiGmail}
+            icon="gmail"
             borderColor="red-500"
             label="Gmail"
           />
           <SocialLink
             href="https://wa.me/5534999903558"
-            icon={SiWhatsapp}
+            icon="whatsapp"
             borderColor="green-500"
             label="WhatsApp"
           />
