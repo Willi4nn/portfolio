@@ -33,21 +33,6 @@ export const PROJECTS: Project[] = [
     githubUrl: 'https://github.com/Willi4nn/cafe-street',
   },
   {
-    image: '/images/weather-wise.png',
-    title: 'Weather Wise',
-    year: 2023,
-    description:
-      'Aplicativo de previsão do tempo que criei com React e OpenWeatherMap API. Implementei busca por cidade, exibição de temperatura, umidade, vento e ícones dinâmicos. Nesse projeto aprendi integração com API, uso do Axios, pesquisa de cidades e CSS responsivo no mobile.',
-    skills: [
-      { icon: 'react', name: 'React' },
-      { icon: 'typescript', name: 'TypeScript' },
-      { icon: 'axios', name: 'Axios' },
-      { icon: 'expo', name: 'Expo' },
-    ],
-    projectUrl: 'https://weather-wise--a2j0aj6d03.expo.app/',
-    githubUrl: 'https://github.com/Willi4nn/weather-wise',
-  },
-  {
     image: '/images/realtime-chat.png',
     title: 'Realtime Chat',
     year: 2025,
@@ -60,6 +45,7 @@ export const PROJECTS: Project[] = [
       { icon: 'tailwind', name: 'Tailwind' },
       { icon: 'typescript', name: 'TypeScript' },
     ],
+    projectUrl: 'https://realtime-chat-delta-one.vercel.app/login',
     githubUrl: 'https://github.com/Willi4nn/realtime-chat',
   },
   {
@@ -82,5 +68,35 @@ export const PROJECTS: Project[] = [
     ],
     projectUrl: 'https://mern-auth-ruby.vercel.app/',
     githubUrl: 'https://github.com/Willi4nn/mern-auth',
+  },
+  {
+    image: '/images/revest.png',
+    title: 'Revest',
+    year: 2025,
+    description:
+      'Desenvolvi o Revest para resolver um problema real na estofaria do meu pai: a duvida de alguns clientes na hora de escolher o tecido certo para o móvel. O projeto utiliza a API do Gemini para gerar prévias realistas de reestofamento, mantendo a iluminação e geometria original. Enfrentei desafios técnicos como engenharia de prompt para reconstrução de móveis, conversão de imagens no cliente (AVIF/HEIC) e implementação de resiliência na API com retry inteligente e fallback de modelos.',
+    skills: [
+      { icon: 'react', name: 'React' },
+      { icon: 'typescript', name: 'TypeScript' },
+      { icon: 'tailwind', name: 'Tailwind' },
+      { icon: 'google', name: 'Gemini API' },
+    ],
+    projectUrl: 'https://revest-rho.vercel.app/',
+    githubUrl: 'https://github.com/Willi4nn/revest',
+  },
+  {
+    image: '/images/weather-wise.png',
+    title: 'Weather Wise',
+    year: 2023,
+    description:
+      'Aplicativo de previsão do tempo que criei com React e OpenWeatherMap API. Implementei busca por cidade, exibição de temperatura, umidade, vento e ícones dinâmicos. Nesse projeto aprendi integração com API, uso do Axios, pesquisa de cidades e CSS responsivo no mobile.',
+    skills: [
+      { icon: 'react', name: 'React' },
+      { icon: 'typescript', name: 'TypeScript' },
+      { icon: 'axios', name: 'Axios' },
+      { icon: 'expo', name: 'Expo' },
+    ],
+    projectUrl: 'https://weather-wise--a2j0aj6d03.expo.app/',
+    githubUrl: 'https://github.com/Willi4nn/weather-wise',
   },
 ];
