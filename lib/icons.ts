@@ -34,5 +34,8 @@ export const iconMap = {
   whatsapp: dynamic(() => import('react-icons/si').then((m) => m.SiWhatsapp)),
   zod: dynamic(() => import('react-icons/si').then((m) => m.SiZod)),
   axios: dynamic(() => import('react-icons/si').then((m) => m.SiAxios)),
+  prisma: dynamic(() => import('react-icons/si').then((m) => m.SiPrisma)),
+  zustand: dynamic(() => import('react-icons/si').then((m) => m.SiMacpaw)),
 };
+
 export type IconKey = keyof typeof iconMap;

@@ -17,6 +17,26 @@ interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    image: '/images/renova.png',
+    title: 'Renova',
+    year: 2026,
+    description:
+      'Sistema ERP completo desenvolvido para transformar a gestão da estofaria do meu pai. O projeto resolve problemas reais de organização, automatizando o cálculo de custos de produção (insumos e mão de obra) e fornecendo um dashboard financeiro com KPIs estratégicos. Foquei em entregar uma experiência de nível profissional com autenticação segura via httpOnly cookies, gerenciamento de estado global escalável e confiabilidade com testes automatizados.',
+    skills: [
+      { icon: 'react', name: 'React' },
+      { icon: 'nodejs', name: 'Node.js' },
+      { icon: 'typescript', name: 'TypeScript' },
+      { icon: 'postgresql', name: 'PostgreSQL' },
+      { icon: 'prisma', name: 'Prisma ORM' },
+      { icon: 'zustand', name: 'Zustand' },
+      { icon: 'jest', name: 'Jest' },
+      { icon: 'zod', name: 'Zod' },
+      { icon: 'tailwind', name: 'Tailwind' },
+    ],
+    projectUrl: 'https://renova-manager.vercel.app',
+    githubUrl: 'https://github.com/Willi4nn/renova',
+  },
+  {
     image: '/images/cafe-street.png',
     title: 'Cafe Street',
     year: 2024,
