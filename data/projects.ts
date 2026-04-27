@@ -69,27 +69,6 @@ export const PROJECTS: Project[] = [
     githubUrl: 'https://github.com/Willi4nn/realtime-chat',
   },
   {
-    image: '/images/mern-auth.png',
-    title: 'MERN Auth',
-    year: 2024,
-    description:
-      'Sistema de autenticação completa que construí com MERN + TypeScript. Implementei login social, JWT, validação com Zod, rotas protegidas e envio de email. Aprendi sobre cadastro, login normal e com Google, salvar senha criptografada, testes gerais com Jest, JWT, middleware, rotas protegidas, MongoDB e Tailwind.',
-    skills: [
-      { icon: 'react', name: 'React' },
-      { icon: 'typescript', name: 'TypeScript' },
-      { icon: 'jest', name: 'Jest' },
-      { icon: 'zod', name: 'Zod' },
-      { icon: 'axios', name: 'Axios' },
-      { icon: 'tailwind', name: 'Tailwind' },
-      { icon: 'nodejs', name: 'Node.js' },
-      { icon: 'express', name: 'Express' },
-      { icon: 'mongodb', name: 'MongoDB' },
-      { icon: 'google', name: 'Google OAuth' },
-    ],
-    projectUrl: 'https://mern-auth-ruby.vercel.app/',
-    githubUrl: 'https://github.com/Willi4nn/mern-auth',
-  },
-  {
     image: '/images/revest.png',
     title: 'Revest',
     year: 2025,

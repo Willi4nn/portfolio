@@ -14,10 +14,10 @@ export function About() {
               Olá, sou <span className="text-cyan-500">Willian</span>
             </h1>
             <p className="mb-4 text-4xl font-bold text-cyan-500">
-              Desenvolvedor Frontend
+              Desenvolvedor Full Stack
             </p>
             <p className="justify-center text-lg leading-relaxed text-gray-300">
-              Sou desenvolvedor front-end com formação em QA, o que me permite
+              Sou desenvolvedor full stack com formação em QA, o que me permite
               escrever código de qualidade, robusto e de fácil manutenção desde
               o início. Atuo com React (React.js e Mobile) e Node.js, entregando
               interfaces de alto desempenho com padrões sólidos de engenharia.
