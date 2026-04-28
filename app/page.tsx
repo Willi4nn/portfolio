@@ -6,9 +6,9 @@ import Skills from '@/components/sections/skills';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
+    <main className="relative flex min-h-screen flex-col overflow-hidden text-slate-50">
       <Header />
-      <div>
+      <div className="z-10">
         <About />
         <Skills />
         <Projects />

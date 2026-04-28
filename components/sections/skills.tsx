@@ -47,10 +47,7 @@ export default function Skills() {
   const infiniteSkills = [...SKILLS, ...SKILLS, ...SKILLS];
 
   return (
-    <section
-      id="skills"
-      className="scroll-mt-10 border-t border-white/10 bg-transparent py-16"
-    >
+    <section id="skills" className="relative scroll-mt-24 py-20">
       <div className="mx-auto">
         <h2 className="mb-12 text-center text-3xl font-bold text-white">
           Minhas {''} <span className="text-cyan-500">Habilidades</span>

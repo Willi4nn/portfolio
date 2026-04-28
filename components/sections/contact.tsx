@@ -2,10 +2,7 @@ import SocialLink from '../ui/social-link';
 
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="scroll-mt-10 border-t border-white/10 bg-transparent py-16"
-    >
+    <section id="contact" className="relative scroll-mt-24 py-20">
       <div className="mx-auto flex max-w-3xl flex-col items-center">
         <h2 className="mb-12 justify-center text-center text-3xl font-bold text-white">
           Meus {''} <span className="text-cyan-500">Contatos</span>

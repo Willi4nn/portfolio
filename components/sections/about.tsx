@@ -3,7 +3,7 @@ import SocialLink from '../ui/social-link';
 
 export function About() {
   return (
-    <div className="relative overflow-hidden bg-[#050505]">
+    <div className="relative overflow-hidden pt-20">
       <GridBackground>
         <section
           id="about"

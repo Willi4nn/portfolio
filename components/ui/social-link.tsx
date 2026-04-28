@@ -8,10 +8,10 @@ interface SocialLinkProps {
 }
 
 const borderHoverMap = {
-  white: 'hover:border-white',
-  'blue-500': 'hover:border-blue-500',
-  'red-500': 'hover:border-red-500',
-  'green-500': 'hover:border-green-500',
+  white: 'hover:border-white hover:shadow-white/20',
+  'blue-500': 'hover:border-blue-500 hover:shadow-blue-500/20',
+  'red-500': 'hover:border-red-500 hover:shadow-red-500/20',
+  'green-500': 'hover:border-green-500 hover:shadow-green-500/20',
 } as const;
 
 export default function SocialLink({
@@ -30,13 +30,13 @@ export default function SocialLink({
   return (
     <a
       href={href}
-      className={`group flex h-12 w-12 items-center justify-center rounded-lg border border-white/10 text-white/80 transition-all duration-200 hover:scale-105 hover:bg-white/5 hover:text-white ${hoverClass}`}
+      className={`group flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 text-white/80 transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/5 hover:text-white hover:shadow-lg active:scale-95 ${hoverClass}`}
       target={isExternal ? '_blank' : undefined}
       rel={isExternal ? 'noopener noreferrer' : undefined}
       aria-label={label}
     >
       <IconComponent
-        className="h-6 w-6 transition-transform group-hover:scale-110"
+        className="size-6 transition-transform duration-300 group-hover:scale-110"
         aria-hidden="true"
       />
     </a>
