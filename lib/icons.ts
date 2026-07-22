@@ -1,41 +1,60 @@
-import dynamic from 'next/dynamic';
+import { IconType } from 'react-icons';
+import {
+  SiAxios,
+  SiCypress,
+  SiDocker,
+  SiExpo,
+  SiExpress,
+  SiFirebase,
+  SiGit,
+  SiGmail,
+  SiJavascript,
+  SiJest,
+  SiMacpaw,
+  SiMongodb,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPostgresql,
+  SiPostman,
+  SiPrisma,
+  SiPython,
+  SiReact,
+  SiStripe,
+  SiTailwindcss,
+  SiTypescript,
+  SiZod,
+} from 'react-icons/si';
 
-export const iconMap = {
-  typescript: dynamic(() =>
-    import('react-icons/si').then((m) => m.SiTypescript)
-  ),
-  javascript: dynamic(() =>
-    import('react-icons/si').then((m) => m.SiJavascript)
-  ),
-  react: dynamic(() => import('react-icons/si').then((m) => m.SiReact)),
-  nextjs: dynamic(() => import('react-icons/si').then((m) => m.SiNextdotjs)),
-  tailwind: dynamic(() =>
-    import('react-icons/si').then((m) => m.SiTailwindcss)
-  ),
-  nodejs: dynamic(() => import('react-icons/si').then((m) => m.SiNodedotjs)),
-  express: dynamic(() => import('react-icons/si').then((m) => m.SiExpress)),
-  python: dynamic(() => import('react-icons/si').then((m) => m.SiPython)),
-  mongodb: dynamic(() => import('react-icons/si').then((m) => m.SiMongodb)),
-  postgresql: dynamic(() =>
-    import('react-icons/si').then((m) => m.SiPostgresql)
-  ),
-  git: dynamic(() => import('react-icons/si').then((m) => m.SiGit)),
-  jest: dynamic(() => import('react-icons/si').then((m) => m.SiJest)),
-  cypress: dynamic(() => import('react-icons/si').then((m) => m.SiCypress)),
-  postman: dynamic(() => import('react-icons/si').then((m) => m.SiPostman)),
-  docker: dynamic(() => import('react-icons/si').then((m) => m.SiDocker)),
-  firebase: dynamic(() => import('react-icons/si').then((m) => m.SiFirebase)),
-  google: dynamic(() => import('react-icons/si').then((m) => m.SiGoogle)),
-  gmail: dynamic(() => import('react-icons/si').then((m) => m.SiGmail)),
-  github: dynamic(() => import('react-icons/si').then((m) => m.SiGithub)),
-  linkedin: dynamic(() => import('react-icons/si').then((m) => m.SiLinkedin)),
-  stripe: dynamic(() => import('react-icons/si').then((m) => m.SiStripe)),
-  expo: dynamic(() => import('react-icons/si').then((m) => m.SiExpo)),
-  whatsapp: dynamic(() => import('react-icons/si').then((m) => m.SiWhatsapp)),
-  zod: dynamic(() => import('react-icons/si').then((m) => m.SiZod)),
-  axios: dynamic(() => import('react-icons/si').then((m) => m.SiAxios)),
-  prisma: dynamic(() => import('react-icons/si').then((m) => m.SiPrisma)),
-  zustand: dynamic(() => import('react-icons/si').then((m) => m.SiMacpaw)),
+import { FaGithub, FaGoogle, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+
+export const iconMap: Record<string, IconType> = {
+  typescript: SiTypescript,
+  javascript: SiJavascript,
+  react: SiReact,
+  nextjs: SiNextdotjs,
+  tailwind: SiTailwindcss,
+  nodejs: SiNodedotjs,
+  express: SiExpress,
+  python: SiPython,
+  mongodb: SiMongodb,
+  postgresql: SiPostgresql,
+  git: SiGit,
+  jest: SiJest,
+  cypress: SiCypress,
+  postman: SiPostman,
+  docker: SiDocker,
+  firebase: SiFirebase,
+  google: FaGoogle,
+  gmail: SiGmail,
+  github: FaGithub,
+  linkedin: FaLinkedin,
+  stripe: SiStripe,
+  expo: SiExpo,
+  whatsapp: FaWhatsapp,
+  zod: SiZod,
+  axios: SiAxios,
+  prisma: SiPrisma,
+  zustand: SiMacpaw,
 };
 
 export type IconKey = keyof typeof iconMap;

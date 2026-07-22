@@ -6,14 +6,12 @@ import Skills from '@/components/sections/skills';
 
 export default function Home() {
   return (
-    <main className="relative flex min-h-screen flex-col overflow-hidden text-slate-50">
+    <main className="relative flex min-h-screen flex-col overflow-x-hidden text-slate-50">
       <Header />
-      <div className="z-10">
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-      </div>
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
     </main>
   );
 }

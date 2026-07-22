@@ -1,20 +1,45 @@
+'use client';
 import { PROJECTS } from '@/data/projects';
-import { FadeIn, StaggerContainer, StaggerItem } from '../ui/fade-in';
+import { motion } from 'motion/react';
 import ProjectCard from '../ui/project-card';
+import { SectionTitle } from '../ui/section-title';
 
 export default function Projects() {
   return (
     <section id="projects" className="relative scroll-mt-24 py-20">
-      <div className="container mx-auto">
-        <FadeIn>
-          <h2 className="mb-12 text-center text-3xl font-bold text-white md:text-4xl">
-            Meus <span className="text-cyan-500">Projetos</span>
-          </h2>
-        </FadeIn>
+      <div className="container mx-auto px-4">
+        <SectionTitle highlighted="Projetos" className="mb-14">
+          Meus
+        </SectionTitle>
 
-        <StaggerContainer className="grid grid-cols-1 gap-12 px-6 md:gap-16">
+        <motion.div
+          className="grid grid-cols-1 gap-16 md:gap-20"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-10%' }}
+          variants={{
+            visible: {
+              transition: {
+                staggerChildren: 0.15,
+              },
+            },
+          }}
+        >
           {PROJECTS.map((project, i) => (
-            <StaggerItem key={project.title + i}>
+            <motion.div
+              key={project.title + i}
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.7,
+                    ease: [0.21, 0.47, 0.32, 0.98],
+                  },
+                },
+              }}
+            >
               <ProjectCard
                 reverse={i % 2 === 1}
                 image={project.image}
@@ -25,9 +50,9 @@ export default function Projects() {
                 projectUrl={project.projectUrl}
                 githubUrl={project.githubUrl}
               />
-            </StaggerItem>
+            </motion.div>
           ))}
-        </StaggerContainer>
+        </motion.div>
       </div>
     </section>
   );

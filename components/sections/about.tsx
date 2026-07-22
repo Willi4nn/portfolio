@@ -1,35 +1,85 @@
+'use client';
+
+import { motion } from 'motion/react';
 import { GridBackground } from '../ui/grid-background';
+import HeroCanvas from '../ui/hero-canvas';
 import SocialLink from '../ui/social-link';
+import { TypingText } from '../ui/typing-text';
 
 export function About() {
   return (
-    <div className="relative overflow-hidden pt-20">
+    <section
+      id="about"
+      className="bg-background relative min-h-[70vh] w-full overflow-hidden md:min-h-[60vh]"
+    >
+      <HeroCanvas />
+
       <GridBackground>
-        <section
-          id="about"
-          className="relative mb-16 flex min-h-[50vh] flex-col items-center justify-center px-8 pt-35 text-center"
-        >
-          <div className="max-w-3xl text-center">
-            <h1 className="mb-2 text-5xl font-bold">
-              Olá, sou <span className="text-cyan-500">Willian</span>
+        <div className="relative z-10 flex min-h-[70vh] flex-col items-center justify-center px-4 py-12 text-center md:min-h-[70vh] md:py-20 lg:py-24">
+          <motion.div
+            className="w-full max-w-4xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+          >
+            <p className="text-neon-cyan mt-2 font-mono text-sm font-medium tracking-widest md:mt-4 md:text-xl lg:text-2xl">
+              Olá, eu sou
+            </p>
+
+            <h1 className="mb-4 font-mono text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+              <TypingText
+                text="Willian Pereira"
+                className="text-foreground text-glow-magenta"
+                typingSpeed={100}
+                delay={500}
+                loop={false}
+              />
             </h1>
-            <p className="mb-4 text-4xl font-bold text-cyan-500">
-              Desenvolvedor Full Stack
-            </p>
-            <p className="justify-center text-lg leading-relaxed text-gray-300">
-              Sou desenvolvedor full stack com formação em QA, o que me permite
-              escrever código de qualidade, robusto e de fácil manutenção desde
-              o início. Atuo com React (React.js e Mobile) e Node.js, entregando
-              interfaces de alto desempenho com padrões sólidos de engenharia.
-              <br />
-              Formado em Sistemas de Informação, tenho experiência em trabalho
-              remoto com soluções B2B. Minha combinação de expertise técnica e
-              mentalidade analítica garante aplicações confiáveis, escaláveis e
-              bem estruturadas.
-            </p>
-          </div>
-          <div className="mx-2 h-8 w-px" />
-          <div className="flex items-center gap-5">
+
+            <div className="text-neon-magenta mb-4 flex min-h-12 items-center justify-center font-mono text-lg font-semibold md:mb-8 md:min-h-16 md:text-3xl">
+              <TypingText
+                text={[
+                  'Desenvolvedor Full Stack',
+                  'Especialista em React e Node.js',
+                  'Background Sólido em QA/SDET',
+                ]}
+                typingSpeed={60}
+                eraseSpeed={30}
+                pauseTime={2500}
+                delay={2500}
+                loop={true}
+              />
+            </div>
+
+            <div className="text-foreground/80 mx-auto max-w-3xl space-y-4 px-2 text-sm leading-relaxed font-light sm:text-base md:space-y-6 md:text-lg lg:text-xl">
+              <p>
+                Desenvolvedor Full Stack com quase 3 anos de experiência em
+                Quality Assurance (QA), combinando visão de engenharia,
+                qualidade e experiência do usuário para construir aplicações web
+                modernas, performáticas e confiáveis.
+              </p>
+
+              <p>
+                Bacharel em Sistemas de Informação, especializado no ecossistema
+                <strong className="font-medium text-white">
+                  {' '}
+                  TypeScript, React, Next.js e Node.js
+                </strong>
+                . Desenvolvo aplicações do frontend ao backend com foco em
+                arquitetura escalável, código limpo, performance e excelente
+                experiência do usuário.
+              </p>
+            </div>
+          </motion.div>
+
+          <div className="h-8 md:h-14" />
+
+          <motion.div
+            className="flex flex-wrap items-center justify-center gap-4 md:gap-8"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+          >
             <SocialLink
               href="https://github.com/Willi4nn"
               icon="github"
@@ -42,9 +92,14 @@ export function About() {
               borderColor="blue-500"
               label="LinkedIn"
             />
-          </div>
-        </section>
+          </motion.div>
+        </div>
       </GridBackground>
-    </div>
+
+      <div
+        className="border-neon-magenta/20 absolute bottom-0 w-full border-t"
+        aria-hidden="true"
+      />
+    </section>
   );
 }

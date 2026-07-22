@@ -37,6 +37,20 @@ export const PROJECTS: Project[] = [
     githubUrl: 'https://github.com/Willi4nn/renova',
   },
   {
+    image: '/images/foto-teka.png',
+    title: 'Foto Teka',
+    year: 2026,
+    description:
+      'Site institucional de alta conversão desenvolvido como freelancer para uma empresa de locação de totens fotográficos. O foco absoluto do projeto foi entregar performance extrema e otimização de SEO Local para captação de leads em Patos de Minas e região. Construído com as tecnologias mais recentes do mercado (Next.js, React e Tailwind), a aplicação conta com Server Components, uma galeria interativa com Lightbox customizado via Framer Motion e um formulário de orçamentos dinâmico. Uma entrega completa de ponta a ponta gerando valor real e digitalização para o negócio da cliente.',
+    skills: [
+      { icon: 'nextjs', name: 'Next.js' },
+      { icon: 'react', name: 'React' },
+      { icon: 'typescript', name: 'TypeScript' },
+      { icon: 'tailwind', name: 'Tailwind' },
+    ],
+    projectUrl: 'https://www.fototeka.com.br',
+  },
+  {
     image: '/images/cafe-street.png',
     title: 'Cafe Street',
     year: 2024,
